@@ -29,13 +29,13 @@ public class CubeController : MonoBehaviour
     }
 
     //キューブが他のオブジェクトと接触したら音を鳴らす
-     void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         audio.PlayOneShot(audioClip, 0.5f);
         //ユニティちゃんと接触した場合は鳴らさない
-        if(collision.gameObject.tag=="UnityChanTag")
+        if (collision.gameObject.tag == "UnityChanTag")
         {
-          audio.volume = 0;
+            audio.volume = 0;
         }
     }
 }
